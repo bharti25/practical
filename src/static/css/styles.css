@@ -1,0 +1,230 @@
+*{margin: 0 auto; padding: 0px; list-style: none; border: none;box-sizing: border-box;text-decoration: none;outline: none;}
+.wrapper {
+    max-width: 1180px;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+.text-center{
+    text-align: center;
+}
+/* Header CSS */
+header .logo {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+header .logo img{
+    float: none;
+}
+.navbar, .steps {
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.navbar .menu, .steps ul {
+    display: inline-block;
+}
+.navbar .menu li, .steps ul li {
+    float: left;
+    width: auto;
+}
+.navbar .menu li a {
+    font-size: 15px;
+    display: block;
+    border: 1px solid transparent;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    background: transparent;
+    padding: 6px 12px
+}
+.steps ul li a {
+    display: inline-block;
+    color: #000;
+    padding: 6px 12px;
+}
+.steps ul {
+    width: 100%;
+}
+.steps ul li {
+    width: 25%;
+}
+.steps ul li .active {
+    color: crimson;
+}
+.steps ul li hr {
+    border: 1px solid #ccc; 
+}
+.steps ul li .circle{
+    background-color: transparent;
+    border: 2px solid #ccc;
+    height: 10px;
+    border-radius: 50%;
+    width: 10px;
+    margin-top: -6px;;
+}
+
+/* Select a Box page CSS */
+.choosebox h3 {
+    padding-bottom: 10px;
+}
+.choosebox p {
+    padding-bottom: 30px;
+}
+.giftbox {
+    margin: 0px 50px;
+    width: 100%;
+    float: left;
+    padding-bottom: 50px;
+}
+.giftbox img{
+    width: 400px;
+}
+.giftbox figure {
+    display: -moz-inline-grid;
+    display: -ms-inline-grid;
+    display: inline-grid;
+    width: 40%;
+    margin-right: 70px;
+}
+.giftbox figcaption {
+    padding-top: 10px;
+}
+/* Card CSS */
+.card {
+    float: left;
+    width: 100%;
+    padding-bottom: 50px;
+}
+.card figure {
+    float: left;
+    margin-right: 3em;
+}
+.card img {
+    width: 280px;
+    display: block;
+}
+/* Message CSS */
+.card.message figcaption a {
+    color: #000;
+}
+.card textarea {
+    width: 100%;
+    height: 200px;
+}
+.message figure {
+    float: left;
+    width: 30%;
+}
+.message .msgdetails {
+    float: left;
+    width: 65%;
+}
+.message .msgdetails .btn {
+    background-color: #20b0ad;
+    padding: 10px;
+    color: #fff;
+}
+/* Review CSS */
+.review figure {
+    width: 40%;
+}
+.review figure img {
+    width: 500px;
+}
+.review .reviewdetails {
+    width: 55%;
+    padding-left: 60px;
+}
+.cartbtn {
+    margin-top: 20px;
+    font-weight: 600;
+}
+/* Gift CSS */
+.gift {
+    float: left;
+    width: 100%;
+    padding-bottom: 30px;
+}
+.gift select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+.gift .list figure {
+    float: left;
+    margin-right: 50px;
+    position: relative;
+}
+.gift .list .btn.add {
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    padding: 10px;
+    width: 300px;
+    background-color: #20b0ad;
+    color: #fff;
+    font-weight: 600;
+}
+.complete_box {
+    background-color:#178784;
+    float: right;
+    padding: 10px;
+    width: 120px;
+    border: none;
+    color: #fff;
+    margin-top: -20px;
+    outline: none;
+    opacity: 1;
+}
+/* Footer CSS */
+.footer {
+    float: left;
+    width: 100%;
+    background-color: #fef1e8;
+    padding-bottom: 40px;
+}
+.footer h4 {
+    color: #060606;
+    font-weight: 600;
+    font-size: 20px;
+}
+.footer input {
+    border: 2px solid #2a2828;
+    padding: 10px 20px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #2a2828;
+    background-color: transparent;
+    /* height: 44px; */
+}
+.footer .box {
+    float: left;
+    width: 25%;
+    padding-left: 0px;
+    line-height: 1.8;
+}
+.footer .btn {
+    padding: 12px;
+    background-color: #2a2828;
+    border: 2px solid #2a2828;
+    color: #fef1e8;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-family: "Lato","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+    border: 0;
+    display: inline-block;
+    margin-left: 6px;
+    /* height: 44px; */
+    word-break: normal;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+    border-radius: 3px;
+}
+.footer li a {
+    color: #2a2828;
+    font-family: "Lato","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-decoration: none;
+    font-size: 0.875em
+}
