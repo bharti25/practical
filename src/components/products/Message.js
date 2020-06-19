@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Header from './../common/Header';
 import Footer from './../common/Footer';
 import {NavLink} from 'react-router-dom';
-import card_1 from './../../static/images/1.png';
-import card_2 from './../../static/images/2.png';
 
 class Message extends Component {
     constructor() {
@@ -18,6 +16,11 @@ class Message extends Component {
         this.setState({
             chars_left: 350 - input.length
         });
+        this.saveMsg = this.saveMsg.bind(this);
+    }
+    saveMsg(e) {
+        localStorage.setItem('msg', document.getElementById('msg').value)
+        this.props.history.push('/review')
     }
     render() {
         return (
@@ -31,7 +34,7 @@ class Message extends Component {
                         <div className="card box-1 message">
                             <div>
                                 <figure>
-                                    <img src={card_2} alt="Card Box" className="imgsize" />
+                                    <img src={require(`./../../static/images/${localStorage.getItem('cardPhoto')}`)} alt="Card Box" className="imgsize" />
                                     <figcaption className="text-center"><NavLink to="/card">
                                         (Change Card)
                                     </NavLink></figcaption>
@@ -39,12 +42,12 @@ class Message extends Component {
                                 <div className="msgdetails">
                                     <p>Message on card</p>
                                     <h4>{this.state.chars_left} character(s) left</h4>
-                                    <textarea onChange={this.handleChange.bind(this)}></textarea>
+                                    <textarea id="msg" onChange={this.handleChange.bind(this)} maxLength='350'></textarea>
                                     <h4>350 characters max limit</h4>
                                     <p><input type="checkbox" /> Click here if you want to hand write your message and we'll send you the
                                     blank greeting card with your photos
                                     </p>
-                                    <NavLink to="/review" className="btn">Save Message and Card</NavLink>
+                                    <button onClick={this.saveMsg} className="btn">Save Message and Card</button>
                                 </div>
                             </div>
                         </div>

@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Emoji Cup",
+        "photo": "emoji_mug.png",
+        "price": 500.00
+    },
+    {
+        "id": 2,
+        "name": "Horse Gift",
+        "photo": "gift_1.png",
+        "price": 700.00
+    },
+    {
+        "id": 3,
+        "name": "Mug",
+        "photo": "gift_2.png",
+        "price": 600.00
+    }, 
+    {
+        "id": 4,
+        "name": "Gift Card",
+        "photo": "gift_3.png",
+        "price": 400.00
+    }
+]

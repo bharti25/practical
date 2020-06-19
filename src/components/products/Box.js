@@ -1,11 +1,28 @@
 import React, { Component } from 'react';
 import Header from './../common/Header';
 import Footer from './../common/Footer';
-import peach from './../../static/images/peach.png';
-import black from './../../static/images/black.png';
 import {NavLink} from 'react-router-dom';
+import boxData from './../data/box.json';
 
 class Box extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            productId: null,
+            total: 0.00
+            }
+        this.showModal = this.showModal.bind(this);
+    }
+    showModal(e, i) {
+        const clickData = boxData.filter((data, index) => {
+            return index === i;
+        })[0];
+        localStorage.setItem("boxId", clickData.id)
+        localStorage.setItem("boxName", clickData.name)
+        localStorage.setItem("boxPhoto", clickData.photo)
+        localStorage.setItem("boxPrice", clickData.price)
+        localStorage.setItem("boxColor", clickData.color)
+    }
     render() {
         return (
             <div>
@@ -15,18 +32,18 @@ class Box extends Component {
                         <h3 className="text-center">SELECT A BOX</h3>
                         <p className="text-center">Choose a packaging that speaks to your loved one's style!</p>
                         <div className="giftbox box-1">
-                            <NavLink to="/products">
-                                <figure className="text-center">
-                                    <img src={peach} alt="Peach Box" className="imgsize" />
-                                    <figcaption>Peach</figcaption>
-                                </figure>
-                            </NavLink>
-                            <NavLink to="/products">
-                                <figure className="text-center">
-                                    <img src={black} alt="Black Box" className="imgsize" />
-                                    <figcaption>Black</figcaption>
-                                </figure>
-                            </NavLink>
+                            {
+                                boxData.map((boxDetail, i) => {
+                                    return (
+                                        <NavLink to="/products" key={i} onClick={(e) => this.showModal(e, boxDetail.id-1)}>
+                                            <figure className="text-center">
+                                            <img src={require(`./../../static/images/${boxDetail.photo}`)} className="imgsize" alt="Box" />
+                                                <figcaption>{boxDetail.name}</figcaption>
+                                            </figure>
+                                        </NavLink>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>
